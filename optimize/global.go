@@ -99,12 +99,12 @@ type Method interface {
 // The third argument contains the settings for the minimization. The
 // DefaultLocalSettings and DefaultGlobalSettings functions can be called for
 // different default settings depending on the optimization method. If
-// settings == nil, the default settings are used. All settings will be honored
+// settings is nil, the default settings are used. All settings will be honored
 // for all Methods, even if that setting is counter-productive to the method.
 // However, the information used to check the Settings, and the times at which
 // they are checked, are controlled by the Method. For example, if the Method
 // never evaluates the gradient of the function then GradientThreshold will not
-// be checked.  Minimize cannot guarantee strict adherence to the bounds
+// be checked. Minimize cannot guarantee strict adherence to the bounds
 // specified when performing concurrent evaluations and updates.
 //
 // The final argument is the optimization method to use. If method == nil, then
